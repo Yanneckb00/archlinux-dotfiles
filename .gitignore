@@ -1,60 +1,32 @@
-# ### .gitignore ###
-# .cache/
-# .gitOLD/
-# .gnupg/
-# .local/
-# .mozilla/
-# .pki/
-# .ssh/
-# .steam/
-# .thunderbird/
-# .var/
-# Bilder/
-# Dokumente/
-# Downloads/
-# Musik/
-# Öffentlich/
-# Schreibtisch/
-# Videos/
-# Vorlagen/
-# yay/
-
-# .bash_history
-# .bash_logout
-# .bash_profile
-# .pulse-cookie
-# .shell.pre-oh-my-zsh
-# .spaceshiprc.zsh
-# .spaceshiprc.zsh.zwc
-# .steampath
-# .steampid
-# .wget-hsts
-# .zcompdump-archlinux-5.9
-# .zcompdump-archlinux-5.9.zwc.zsh_history
-# undefined.bak
+### .gitignore ###
 
 ## ignore everything 
 *
 
-## track gitigonre
+## track git
 !.gitignore
+!.gitconfig
 
 ## exclude ignore for configuration files
 ### folders
-!.docs/
 !.config/fastfetch/
 !.config/forge/
 !.config/kitty/
 !.config/OpenRGB/
 !.config/rofi/
 !.config/zsh/
-!.oh-my-zsh/
+!.docs/
 !.icons/
+!.oh-my-zsh/
 !.themes/
 !.vscode/
-!yay/
+!.zsh/
 
 ### files
 !README.md
 !.zshrc
 !.bashrc
+!.p10k.zsh
+!.spaceshiprc.zsh
+!.spaceshiprc.zsh.zwc
+!.zshrc
