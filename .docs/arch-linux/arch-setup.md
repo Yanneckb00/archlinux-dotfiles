@@ -86,7 +86,7 @@ after that go into chroot:
     - `sudo ufw allow ssh`
     
 ## Oh My ZSH
-- ZSH: `sudo apt-get install zsh`
+- ZSH: `sudo pacmna -S zsh`
 - OMZ: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 - 
 - Fastfetch: `https://github.com/fastfetch-cli/fastfetch `
@@ -111,12 +111,11 @@ after that go into chroot:
 - GSConnect
 - Just Perfection
 - Media Controls
-- Meida Progress
+- Media Progress
 - Open Bar
 - Removable Drive Menu
 - User Themes
 - Vitals
-
 
 ## Programms
 - Libre Office
@@ -124,7 +123,6 @@ after that go into chroot:
 - Bottles (Windows Wine Manager)
 - GDM-Settings
 - Chrome
-- Firefox
 - Thunderbird
 - Steam
 - Spotify
@@ -132,12 +130,14 @@ after that go into chroot:
 - Warehouse
 - Proton
 - NeoVim
-- Lutris
-- Heroric
+
+- Alpaca
+- Audacity
+- Cartridges
+  - Lutris
+  - Heroric
+- Mission Center
+- 
 
 ### Wallpaper Engine:
 https://github.com/Almamu/linux-wallpaperengine
-
-## initialize git repo
-- git init
-- 

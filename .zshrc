@@ -69,8 +69,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#663399,standout"
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 ## https://spaceship-prompt.sh/config/intro/
 # source "$HOME/.zsh/spaceship/spaceship.zsh"
 
@@ -86,3 +84,5 @@ function clear() {
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
