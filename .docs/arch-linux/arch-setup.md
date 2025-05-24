@@ -68,6 +68,11 @@ after that go into chroot:
 - `cd yay`
 - `makepkg -si`
 
+### activate multilib
+- `sudo nano /etc/pacman.conf`
+- comment in: `[multilib]` and `Include = /etc/pacman.d/mirrorlist`
+- after that `sudo pacman -Sy`
+
 ### Install first YAYs on Arch Linux:
 - Chrome: `yay -S google-chrome`
 - VSCode: `yay -S visual-studio-code-bin`
@@ -141,3 +146,6 @@ after that go into chroot:
 
 ### Wallpaper Engine:
 https://github.com/Almamu/linux-wallpaperengine
+
+Font: Poppins
+Mono Font: JetBrains

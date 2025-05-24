@@ -9,6 +9,9 @@
 - test mount with `sudo mount -a`
 - and check `df -h | grep <drive>`
 
+## move content
+- `sudo rsync -aAXv /run/media/$USER/AltePlatte/ /run/media/$USER/NeuePlatte/`
+
 ## format drive (erase everything!)
 
 

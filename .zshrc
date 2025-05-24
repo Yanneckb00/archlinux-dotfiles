@@ -17,7 +17,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # install with git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-# POWERLEVEL9K_MODE="nerdfont-complete"
+POWERLEVEL9K_MODE="nerdfont-complete"
 
 ## Spaceship settings
 SPACESHIP_PROMPT_ASYNC=true
@@ -26,12 +26,12 @@ SPACESHIP_CHAR_SYMBOL="⚡"
 
 ## Minimal spaceship sections for performance
 SPACESHIP_PROMPT_ORDER=(
-    time
-    user
-    dir
-    git
-    line_sep
-    char
+  time
+  user
+  dir
+  git
+  line_sep
+  char
 )
 
 ### Load oh-my-zsh
@@ -43,46 +43,51 @@ export LANG=de_DE.UTF-8
 ### OMZ Plugins ###
 ## Load plugins
 plugins=(
-    git
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-    sudo
-    web-search
-    copyfile
-    copypath
-    dirhistory
-    history
-    docker-compose
-    composer
-    common-aliases
-    ssh
-    git-auto-fetch
-    macos
-    themes
-    vscode
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  sudo
+  web-search
+  copyfile
+  copypath
+  dirhistory
+  history
+  docker-compose
+  composer
+  common-aliases
+  ssh
+  git-auto-fetch
+  macos
+  themes
+  vscode
 )
 
 ## Plugin Configuration ##
 
 ## zsh-autosuggestions
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#663399,standout"
+## install: git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#663399,standout"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 
+## spaceship
 ## https://spaceship-prompt.sh/config/intro/
 # source "$HOME/.zsh/spaceship/spaceship.zsh"
 
+## fastfetch
 ### https://github.com/dacrab/fastfetch-config
-
 fastfetch
 function clear() {
   command clear
   fastfetch
 }
 
+## p10k
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
+## zsh highlighting
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
