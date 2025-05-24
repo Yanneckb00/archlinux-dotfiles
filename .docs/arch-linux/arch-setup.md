@@ -1,5 +1,3 @@
-das bitte auch formatieren und verbessern
-
 # Arch Linux
 ## Arch Setup
 - Boot from USB
@@ -93,7 +91,11 @@ after that go into chroot:
 - 
 - Fastfetch: `https://github.com/fastfetch-cli/fastfetch `
 - Config all: `https://github.com/fastfetch-cli/fastfetch/blob/dev/presets/all.jsonc `
-- powerlevel10k: `git clone https://github.com/romkatv/powerlevel10k.git`
+- powerlevel10k:
+  - `git clone https://github.com/romkatv/powerlevel10k.git`
+  - `yay -S --noconfirm zsh-theme-powerlevel10k-git`
+  - restart zsh
+  - `p10k configure`
 
 ## Flatpak Apps
 - Extension Manager

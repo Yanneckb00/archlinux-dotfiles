@@ -1,0 +1,50 @@
+### .gitignore ###
+
+## Folders
+.cache/
+.dotnet/
+.gnupg/
+.local/
+.oh-my-zsh/
+.pki/
+.ssh/
+.var/
+Bilder/
+Dokumente/
+Downloads/
+Musik/
+Öffentlich/
+Schreibtisch/
+Videos/
+Vorlagen/
+yay/
+
+## Config
+.config/Code/
+.config/dconf
+.config/epiphany/
+.config/evolution/
+.config/go/
+.config/goa-1.0/
+.config/google-chrome/
+.config/gtk-3.0/
+.config/gtk-4.0/
+.config/ibus/
+.config/menus/
+.config/nautilus/
+.config/pulse/
+.config/systemd/
+.config/yay/
+.config/.gsd-keyboard.settings-ported
+.config/mimeapps.list
+.config/user-dirs.dirs
+.config/user-dirs.locale
+
+## Files
+.bash_history
+.bash_logout
+.bash_profile
+.shell.pre-oh-my-zsh
+.zcompdump-archlinux-5.9
+.zcompdump-archlinux-5.9.zwc
+.zsh_history
