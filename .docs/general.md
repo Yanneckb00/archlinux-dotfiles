@@ -10,3 +10,6 @@
 - `sudo cp ~/Downloads/*.ttf /usr/share/fonts/custom/`
 - `sudo fc-cache -fv`
 
+## Zipp
+- zip: `tar czvf /path/to/destination/backup.tar.gz -C /path/to/target-files .`
+- unzip: `tar xzvf /path/to/backup.tar.gz -C /destination/path`
