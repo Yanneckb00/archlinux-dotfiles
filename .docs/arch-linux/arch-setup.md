@@ -107,20 +107,24 @@ after that go into chroot:
 
 ## GNOME Customization
 -> https://extensions.gnome.org/
+- AppIndicator and KStatusNotifierItem Support
 - ArcMenu
 - Blur My Shell
 - Caffeine
+- CHC-E (Custom Hot Corners - Extended)
 - Clipboard Indicator
 - Dash to Dock
+- Extension List
 - Forge
 - GSConnect
 - Just Perfection
 - Media Controls
 - Media Progress
 - Open Bar
-- Removable Drive Menu
 - User Themes
+- Tiling Shell
 - Vitals
+- Removable Drive Menu
 
 ## Programms
 - Libre Office
