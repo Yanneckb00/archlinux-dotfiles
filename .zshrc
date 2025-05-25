@@ -78,7 +78,9 @@ ZSH_AUTOSUGGEST_USE_ASYNC=1
 ## fastfetch
 ### https://github.com/dacrab/fastfetch-config
 fastfetch
-function clear() {
+
+# run cl for clear and fastfetch init
+function cl() {
   command clear
   fastfetch
 }
