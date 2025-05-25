@@ -68,6 +68,13 @@ after that go into chroot:
 - `cd yay`
 - `makepkg -si`
 
+### install brew:
+- `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+- `test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"`
+- `test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"`
+- `echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bashrc`
+- test with `brew install hello`
+
 ### activate multilib
 - `sudo nano /etc/pacman.conf`
 - comment in: `[multilib]` and `Include = /etc/pacman.d/mirrorlist`
@@ -89,7 +96,12 @@ after that go into chroot:
     - `sudo ufw default deny incoming`
     - `sudo ufw default allow outgoing`
     - `sudo ufw allow ssh`
-    
+
+# Terminal
+## Basic Setup
+- install kitty: `sudo pacman -S kitty`
+- install yazi: `sudo pacman -S yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick && yay -S resvg`
+
 ## Oh My ZSH
 - ZSH: `sudo pacmna -S zsh`
 - OMZ: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
@@ -101,6 +113,8 @@ after that go into chroot:
   - `yay -S --noconfirm zsh-theme-powerlevel10k-git`
   - restart zsh
   - `p10k configure`
+- alternative for p10k: OhMyPosh:
+  - `curl -s https://ohmyposh.dev/install.sh | bash -s`
 
 ## Flatpak Apps
 - Extension Manager
@@ -161,3 +175,4 @@ https://github.com/Almamu/linux-wallpaperengine
 - for amd: `sudo pacman -S mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon`
 - activate proton in steam settings > compability > check and select proton version
 - install proton-ge: `yay -S protonup-qt` and start with `protonup-qt`
+- deactivate shader caching in steam > settings > downloads

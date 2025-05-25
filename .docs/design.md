@@ -1,6 +1,6 @@
 # Design
 Font: Poppins - https://fonts.google.com/specimen/Poppins
-Mono Font: JetBrains
+Mono Font: JetBrainsMono Nerd Font
 
 Icons:
 - Papirus: `sudo pacman -S papirus-icon-theme` - https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
