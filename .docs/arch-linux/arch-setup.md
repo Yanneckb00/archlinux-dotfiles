@@ -151,19 +151,13 @@ after that go into chroot:
 - Mission Center
 - 
 
-### Wallpaper Engine:
+### Wallpaper Engine
 https://github.com/Almamu/linux-wallpaperengine
 
-Font: Poppins - https://fonts.google.com/specimen/Poppins
-Mono Font: JetBrains
-
-Icons:
-- Papirus: `sudo pacman -S papirus-icon-theme` - https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
-- La Capitaine: `cd ~/.icons && git clone https://github.com/keeferrourke/la-capitaine-icon-theme.git`
-- MoreWaita: `yay -S morewaita-icon-theme` - https://github.com/somepaulo/MoreWaita
-
-# TODO:
-- Console stylen
-- Smarte Ecken einrichten
-- VSCode Markdown Preview checken
-- RGB Setup
+### Steam
+- install steam via `sudo pacman  -Sy && sudo pacman -S steam` (not flatpak, for drive support)
+- proton and vulcan: `sudo pacman -S steam gamemode vulkan-icd-loader vulkan-tools`
+- for nvidia: `sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils`
+- for amd: `sudo pacman -S mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon`
+- activate proton in steam settings > compability > check and select proton version
+- install proton-ge: `yay -S protonup-qt` and start with `protonup-qt`

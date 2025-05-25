@@ -1,0 +1,14 @@
+# Design
+Font: Poppins - https://fonts.google.com/specimen/Poppins
+Mono Font: JetBrains
+
+Icons:
+- Papirus: `sudo pacman -S papirus-icon-theme` - https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
+- La Capitaine: `cd ~/.icons && git clone https://github.com/keeferrourke/la-capitaine-icon-theme.git`
+- MoreWaita: `yay -S morewaita-icon-theme` - https://github.com/somepaulo/MoreWaita
+
+# TODO:
+- Console stylen
+- Smarte Ecken einrichten
+- VSCode Markdown Preview checken
+- RGB Setup
