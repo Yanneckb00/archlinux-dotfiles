@@ -110,9 +110,11 @@ after that go into chroot:
 - AppIndicator and KStatusNotifierItem Support
 - ArcMenu
 - Blur My Shell
+- Burn My Windows
 - Caffeine
 - CHC-E (Custom Hot Corners - Extended)
 - Clipboard Indicator
+- Compiz windows effect
 - Dash to Dock
 - Extension List
 - Forge
@@ -123,6 +125,7 @@ after that go into chroot:
 - Open Bar
 - User Themes
 - Tiling Shell
+- Useless Gaps
 - Vitals
 - Removable Drive Menu
 
@@ -151,5 +154,10 @@ after that go into chroot:
 ### Wallpaper Engine:
 https://github.com/Almamu/linux-wallpaperengine
 
-Font: Poppins
+Font: Poppins - https://fonts.google.com/specimen/Poppins
 Mono Font: JetBrains
+
+Icons:
+- Papirus: `sudo pacman -S papirus-icon-theme` - https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
+- La Capitaine: `cd ~/.icons && git clone https://github.com/keeferrourke/la-capitaine-icon-theme.git`
+- MoreWaita: `yay -S morewaita-icon-theme` - https://github.com/somepaulo/MoreWaita
