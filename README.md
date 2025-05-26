@@ -8,4 +8,4 @@
 - git init
 - git add .
 - git commit -m "initial commit"
-- git remote add origin <url>
+- git remote add origin `git@github.com:Yanneckb00/archlinux-dotfiles.git`
