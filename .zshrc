@@ -1,68 +1,67 @@
-#!/bin/bash
+###############################
+### Oh-My-Zsh Configuration ###
+###############################
 
-# Description:
-# Symlinks all files from ~/.dotfiles into the home directory (~),
-# preserving the directory structure.
-# Only files are symlinked, not folders.
-# Existing files at the destination will be overwritten.
-# The following patterns are ignored:
-# - .docs/**
-# - sync.sh
-# - README.md
-# - .git/**
-# - .gitignore
+### Set oh-my-zsh path
+export ZSH="$HOME/.oh-my-zsh"
 
-DOTFILES_DIR="$HOME/.dotfiles"
-TARGET_DIR="$HOME"
+### Set theme
+ZSH_THEME="robbyrussell"
 
-# Ignore patterns (relative to $DOTFILES_DIR)
-IGNORE_PATTERNS=(
-  ".docs/*"
-  "sync.sh"
-  "README.md"
-  ".git/*"
-  ".gitignore"
+
+### Load oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
+### Set language to German
+export LANG=de_DE.UTF-8
+
+### OMZ Plugins ###
+## Load plugins
+plugins=(
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  sudo
+  web-search
+  copyfile
+  copypath
+  dirhistory
+  history
+  docker-compose
+  composer
+  common-aliases
+  ssh
+  git-auto-fetch
+  macos
+  themes
+  vscode
 )
 
-# Check if path matches any ignore pattern
-should_ignore() {
-  local rel_path="$1"
-  for pattern in "${IGNORE_PATTERNS[@]}"; do
-    if [[ "$rel_path" == $pattern ]]; then
-      return 0
-    fi
-  done
-  return 1
+## Plugin Configuration ##
+
+## zsh-autosuggestions
+## install: git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#663399,standout"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+
+## fastfetch
+### https://github.com/dacrab/fastfetch-config
+fastfetch
+
+# run cl for clear and fastfetch init
+function cl() {
+  command clear
+  fastfetch
 }
 
-# Main logic
-cd "$DOTFILES_DIR" || exit 1
+## zsh highlighting
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Find all files (not directories)
-find . -type f | while read -r file; do
-  # Strip leading './'
-  rel_path="${file#./}"
+eval "$(starship init zsh)"
 
-  # Skip ignored files
-  if should_ignore "$rel_path"; then
-    echo "Ignoring: $rel_path"
-    continue
-  fi
-
-  src="$DOTFILES_DIR/$rel_path"
-  dest="$TARGET_DIR/$rel_path"
-
-  # Create parent directory in home if it doesn't exist
-  mkdir -p "$(dirname "$dest")"
-
-  # Remove existing file or symlink
-  if [ -e "$dest" ] || [ -L "$dest" ]; then
-    rm -rf "$dest"
-  fi
-
-  # Create symlink
-  ln -s "$src" "$dest"
-  echo "Linked: $dest -> $src"
-done
-
-echo "Dotfiles symlinked successfully."
+alias ..='cd ..'
+alias ...='cd ../..'
+alias lg='lazygit'
